@@ -1,6 +1,6 @@
 ## IMPORTANT NOTICE
 
-Please `roslaunch` first, wait until fully initialized (after tensorflow gpu info showed up), then start simulator.
+Please follow the Usage section, after `roslaunch`, wait until program fully initialized (tensorflow gpu info showed up), then start simulator.
 
 ### Introduction
 
