@@ -12,7 +12,7 @@ class TLClassifier(object):
         #TODO load classifier
 	r = rospkg.RosPack()
 	path = r.get_path('tl_detector')
-	print(path)
+	#print(path)
         self.model = load_model(path+'/classification_model.h5')
 	self.model._make_predict_function()
 	self.graph = tf.get_default_graph()
@@ -35,7 +35,7 @@ class TLClassifier(object):
 
 	with self.graph.as_default():
 		preds = self.model.predict(img)
-		rospy.loginfo("prob: "+str(preds))
+		#rospy.loginfo("prob: "+str(preds))
 	prediction = np.argmax(preds, axis=1)
 	light_id = prediction[0]
 
